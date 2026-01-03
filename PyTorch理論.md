@@ -26,3 +26,13 @@ def__init__(self):　　
 ・　super():自分の親(nn.Module)を指す  
 .　__init__():初期化する。大事な準備を先に済ませる。  
 これらを行うことによって自分の設定を始める前に親クラスが代々引き継いできた大事な準備を先に済ませておく。
+
+
+### DataLoader と Dataset の関係
+Datasetは1サンプルずつ作る
+DataLoaderはそれをまとめて作る
+DataLoader は「Dataset を、順番・まとめ方・並列性を制御して供給する装置」
+num_workersについて
+環境	推奨
+CPUのみ	0〜2
+GPU	CPUコア数の半分くらい
